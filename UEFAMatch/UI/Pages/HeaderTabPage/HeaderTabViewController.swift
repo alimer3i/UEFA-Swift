@@ -71,13 +71,8 @@ class HeaderTabViewController: BaseViewController<HeaderTabVM> {
                 strongSelf.tabsStack.arrangedSubviews.forEach { currentTab in
                     if currentTab is UIButton {
                         if let currentButton = currentTab as? UIButton{
-                            if  currentButton.tag == selectedTab.rawValue{
-                                currentButton.setTitleColor(strongSelf.viewModel.selectedPageType.selectedTabColor(), for: .normal)
-//                                currentButton.addBottomBorder(color: strongSelf.viewModel.selectedPageType.selectedTabColor())
-                            }else{
-                                currentButton.setTitleColor(.white, for: .normal)
-//                                currentButton.addBottomBorder(color: .clear)
-                            }
+                            currentButton.isSelected = (currentButton.tag == selectedTab.rawValue)
+                            
                         }
                     }
                 }            }.store(in: &cancellables)
@@ -89,6 +84,9 @@ class HeaderTabViewController: BaseViewController<HeaderTabVM> {
             if currentTab is UIButton {
                 if let currentButton = currentTab as? UIButton{
                     currentButton.setTitle(HomeTabsEnum(rawValue: currentTab.tag)?.gertitle(), for: .normal)
+                    currentButton.setTitleColor(viewModel.selectedPageType.selectedTabColor(), for: .selected)
+                    currentButton.setTitleColor(.white, for: .normal)
+
                 }
             }
         }
