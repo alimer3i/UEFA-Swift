@@ -24,7 +24,7 @@ protocol URLRequestBuilder: URLRequestConvertible {
 extension URLRequestBuilder {
     
     var baseURL: URL {
-        return Environment.url.url!
+        return try! "Environment.url".asURL()
     }
     
     var requestURL: URL {

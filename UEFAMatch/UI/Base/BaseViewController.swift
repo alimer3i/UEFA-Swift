@@ -60,12 +60,12 @@ class BaseViewController<Element: BaseVM>: UIViewController, Storyboarded, Scree
                     ((self?.view) ?? UIView()).hideSkeleton()
                 }
             }.store(in: &cancellables)
-        
-        viewModel.$displayAlert
-            .sink { [weak self] data  in
-                guard let strongSelf = self else {return}
-                strongSelf.showAlert(title: data?.0, message: data?.1)
-            }.store(in: &cancellables)
+//        
+//        viewModel.$displayAlert
+//            .sink { [weak self] data  in
+//                guard let strongSelf = self else {return}
+//                strongSelf.displayAlert(title: data?.0 ?? "", message: data?.1 ?? "", cancelText: "Done")
+//            }.store(in: &cancellables)
         
     }
     internal func displayAlert(title: String, message: String, cancelText: String) {
