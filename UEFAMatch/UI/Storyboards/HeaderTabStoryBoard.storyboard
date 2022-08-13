@@ -60,18 +60,27 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRY-pv-CHA">
                                         <rect key="frame" x="18" y="100" width="378" height="38.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38.5" id="JkO-o6-c93"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Champions-Bold" family="Champions" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQL-A2-88r">
                                         <rect key="frame" x="18" y="246.5" width="38" height="19.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19.5" id="EP6-qq-pon"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-dp-2mw">
                                         <rect key="frame" x="18" y="224.5" width="32.5" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="D1Q-iD-G4Q"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -86,17 +95,16 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="60z-Ki-gzb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CgF-TY-umd" secondAttribute="bottom" constant="30" id="057-kJ-Kkv"/>
+                                    <constraint firstItem="bBi-dp-2mw" firstAttribute="top" secondItem="vRY-pv-CHA" secondAttribute="bottom" constant="86" id="7ke-Oe-znM"/>
                                     <constraint firstAttribute="trailing" secondItem="aTf-Zc-1DZ" secondAttribute="trailing" id="AlH-cR-3FS"/>
                                     <constraint firstAttribute="trailing" secondItem="CgF-TY-umd" secondAttribute="trailing" constant="20" id="Did-TY-su6"/>
                                     <constraint firstItem="aTf-Zc-1DZ" firstAttribute="leading" secondItem="PTI-Tf-K7N" secondAttribute="leading" id="Fz1-r2-gSs"/>
-                                    <constraint firstItem="bBi-dp-2mw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vRY-pv-CHA" secondAttribute="bottom" constant="30" id="GNg-Rp-3F8"/>
                                     <constraint firstItem="60z-Ki-gzb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bBi-dp-2mw" secondAttribute="trailing" constant="20" id="Hvi-Zp-fjP"/>
                                     <constraint firstItem="60z-Ki-gzb" firstAttribute="top" secondItem="vRY-pv-CHA" secondAttribute="bottom" constant="12" id="KNH-fL-5Jv"/>
                                     <constraint firstItem="CgF-TY-umd" firstAttribute="centerY" secondItem="ecC-mN-YSn" secondAttribute="centerY" id="Se7-L4-kWD"/>
                                     <constraint firstItem="ecC-mN-YSn" firstAttribute="top" secondItem="PTI-Tf-K7N" secondAttribute="top" constant="56" id="Y7P-LU-liR"/>
                                     <constraint firstItem="vRY-pv-CHA" firstAttribute="centerX" secondItem="PTI-Tf-K7N" secondAttribute="centerX" id="YYu-yO-Dr1"/>
                                     <constraint firstItem="dQL-A2-88r" firstAttribute="leading" secondItem="PTI-Tf-K7N" secondAttribute="leading" constant="18" id="Yzf-R1-sXW"/>
-                                    <constraint firstAttribute="bottom" secondItem="dQL-A2-88r" secondAttribute="bottom" constant="24" id="aLp-gP-WVe"/>
                                     <constraint firstItem="dQL-A2-88r" firstAttribute="top" secondItem="bBi-dp-2mw" secondAttribute="bottom" constant="5" id="bjy-bx-ZXI"/>
                                     <constraint firstItem="vRY-pv-CHA" firstAttribute="top" secondItem="PTI-Tf-K7N" secondAttribute="top" constant="100" id="d18-BI-b0B"/>
                                     <constraint firstItem="ecC-mN-YSn" firstAttribute="leading" secondItem="PTI-Tf-K7N" secondAttribute="leading" constant="20" id="eCE-pd-d7f"/>
