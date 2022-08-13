@@ -20,15 +20,11 @@ pod 'FirebaseCore'
 pod 'Firebase/Crashlytics'
 pod 'Firebase/RemoteConfig'
 pod "SkeletonView"
-pod 'SwifterSwift'
 pod 'EmptyDataSet-Swift', '~> 5.0.0'
 pod 'TweeTextField'
 pod 'FCUUID'
 pod 'GBDeviceInfo', '~> 6.0'
-pod 'PanModal'
 pod 'FlagPhoneNumber'
-pod "ReCaptcha"
-pod 'BonMot'
 pod "SkeletonView"
 pod 'R.swift'
 
