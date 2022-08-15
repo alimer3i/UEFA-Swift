@@ -327,7 +327,6 @@
 				A01E625D28463316007A5DCD /* Extensions */,
 				A01E627A28463316007A5DCD /* Helpers */,
 				A01E628928463316007A5DCD /* Localization */,
-				A01E629828463316007A5DCD /* Supporting Files */,
 				A01E625B28463316007A5DCD /* Utilities */,
 				A01E60FF28462383007A5DCD /* ViewController.swift */,
 				A01E610428462383007A5DCD /* UEFAMatch.xcdatamodeld */,
@@ -464,13 +463,6 @@
 			children = (
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		A01E629828463316007A5DCD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A02108BE2851E49F0027F62E /* UI */ = {
