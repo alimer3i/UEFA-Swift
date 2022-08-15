@@ -8,9 +8,6 @@
 import Foundation
 import UIKit
 import EmptyDataSet_Swift
-import SwifterSwift
-
-
 
 extension UIScrollView {
     
@@ -25,7 +22,7 @@ extension UIScrollView {
                           descTextColor: UIColor = R.color.primary() ?? .blue,
                           titleTextColor: UIColor =  R.color.primary() ?? .blue) {
         
-        let titleAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0).bold,
+        let titleAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0),
                                NSAttributedString.Key.foregroundColor: titleTextColor]
         let titleString = NSAttributedString(string: title, attributes: titleAttributes)
         let descriptionAttribues = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
@@ -33,7 +30,7 @@ extension UIScrollView {
         ]
         let detailString = NSAttributedString(string: description, attributes: descriptionAttribues)
         let buttonTitleAttributes = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0).bold,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18.0),
             NSAttributedString.Key.foregroundColor :  R.color.primary()
         ]
         
@@ -73,7 +70,7 @@ extension UIScrollView {
     func startLoading(title: String? = nil, loaderImageName: String = "loading") {
         var titleAttributedString:NSAttributedString?
         if let title = title {
-            let titleAttributes = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18).bold]
+            let titleAttributes = [ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
             titleAttributedString = NSAttributedString(string: title, attributes: titleAttributes)
         }
         

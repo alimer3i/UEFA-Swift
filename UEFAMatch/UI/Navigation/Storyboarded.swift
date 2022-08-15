@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum AppStoryboard : String {
-    case Main, PreSignIn, OnBoard, VNSubscription, Others, AppUpdate
+    case Main, HeaderTabStoryBoard
     var instance : UIStoryboard {
       return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }

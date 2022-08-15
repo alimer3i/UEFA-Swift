@@ -140,9 +140,9 @@ class RequestInterceptor: Alamofire.RequestInterceptor {
         if let response = request.task?.response as? HTTPURLResponse {
             let fullURL = response.url?.absoluteString ?? ""
             guard let data = (request as? DataRequest)?.data else{
-                DispatchQueue.main.async {
-                    UIApplication.getTopViewController()?.showAlert(title: "Oops! Something went wrong!", message: "The application has encountered an unknown error,but our technical staff have been automatically notified and will be looking into this with the utmost urgency.", completion: nil)
-                }
+//                DispatchQueue.main.async {
+//                    UIApplication.getTopViewController()?.showAlert(title: "Oops! Something went wrong!", message: "The application has encountered an unknown error,but our technical staff have been automatically notified and will be looking into this with the utmost urgency.", completion: nil)
+//                }
                 print("failed to read response data")
                 return
             }
@@ -166,7 +166,7 @@ class RequestInterceptor: Alamofire.RequestInterceptor {
                         }
                         
                         DispatchQueue.main.async {
-                            UIApplication.getTopViewController()?.showAlert(title: errorBlock.titleMessage , message: (errorBlock.message ?? "Unkown Error"), buttonTitles: ["OK"], completion: { (int) in })
+//                            UIApplication.getTopViewController()?.showAlert(title: errorBlock.titleMessage , message: (errorBlock.message ?? "Unkown Error"), buttonTitles: ["OK"], completion: { (int) in })
                         }
                     }
                 } catch let error as NSError {

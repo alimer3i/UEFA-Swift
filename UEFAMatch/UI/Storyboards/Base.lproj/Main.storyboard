@@ -4,35 +4,88 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UEFAMatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="UEFAMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L45-VL-8HA">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KSg-A9-7wI"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CRl-Zd-mHp">
+                                <rect key="frame" x="40" y="378" width="334" height="140"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qA6-3Q-oIB">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AM-2r-ZX1">
+                                                <rect key="frame" x="30" y="10" width="274" height="50"/>
+                                                <color key="backgroundColor" name="navy"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="UCLButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5H-b5-Gox"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3qR-Iu-52l"/>
+                                            <constraint firstItem="1AM-2r-ZX1" firstAttribute="centerY" secondItem="qA6-3Q-oIB" secondAttribute="centerY" id="H02-jA-qa4"/>
+                                            <constraint firstItem="1AM-2r-ZX1" firstAttribute="leading" secondItem="qA6-3Q-oIB" secondAttribute="leading" constant="30" id="i93-4R-tM4"/>
+                                            <constraint firstItem="1AM-2r-ZX1" firstAttribute="top" secondItem="qA6-3Q-oIB" secondAttribute="top" constant="10" id="nUu-gh-nQX"/>
+                                            <constraint firstItem="1AM-2r-ZX1" firstAttribute="centerX" secondItem="qA6-3Q-oIB" secondAttribute="centerX" id="qcB-RE-tvN"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-Cw-kor">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-Hu-IkB">
+                                                <rect key="frame" x="30" y="10" width="274" height="50"/>
+                                                <color key="backgroundColor" name="DarkGrey"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="UELButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gHg-Xz-hgW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="yWL-Hu-IkB" firstAttribute="top" secondItem="fhz-Cw-kor" secondAttribute="top" constant="10" id="38Z-Ez-JGz"/>
+                                            <constraint firstItem="yWL-Hu-IkB" firstAttribute="centerY" secondItem="fhz-Cw-kor" secondAttribute="centerY" id="3lK-M6-9h1"/>
+                                            <constraint firstItem="yWL-Hu-IkB" firstAttribute="centerX" secondItem="fhz-Cw-kor" secondAttribute="centerX" id="57s-Ra-Cgf"/>
+                                            <constraint firstAttribute="height" constant="70" id="CKO-gf-OXo"/>
+                                            <constraint firstItem="yWL-Hu-IkB" firstAttribute="leading" secondItem="fhz-Cw-kor" secondAttribute="leading" constant="30" id="EUh-VB-nBc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L45-VL-8HA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FDH-pE-Rrj"/>
-                            <constraint firstItem="L45-VL-8HA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="s2a-Rq-g7w"/>
+                            <constraint firstItem="CRl-Zd-mHp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="55a-Dv-dLT"/>
+                            <constraint firstItem="CRl-Zd-mHp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q30-FV-c71"/>
+                            <constraint firstItem="CRl-Zd-mHp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qM6-qK-9qM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="UCLButton" destination="1AM-2r-ZX1" id="DZM-iZ-SFp"/>
+                        <outlet property="UELButton" destination="yWL-Hu-IkB" id="WVm-DM-Dfg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +93,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="DarkGrey">
+            <color red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navy">
+            <color red="0.082352941176470587" green="0.11372549019607843" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
